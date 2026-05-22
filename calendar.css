@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar {
+    background: #1c1c1c;
+    border-radius: 16px;
+    padding: 0;
+    width: 360px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* ── Header row ── */
+.cal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 4px;
+}
+
+.cal-header-title {
+    text-align: center;
+}
+
+.cal-month-name {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.3px;
+}
+
+.cal-year-name {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.35);
+    margin-top: 1px;
+    letter-spacing: 0.1px;
+}
+
+.nav-btn {
+    background: #2a2a2a;
+    color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.08);
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: background 0.15s, color 0.15s;
+    flex-shrink: 0;
+}
+
+.nav-btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* ── Day-of-week headers ── */
+.day-header {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 14px 0 8px;
+    text-align: center;
+}
+
+/* ── Day cells ── */
+td {
+    text-align: center;
+    padding: 3px 0;
+}
+
+td > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.12s;
+}
+
+td:not(.fora):not(.avui) > span:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* ── Today ── */
+td.avui > span {
+    background: #fff;
+    color: #111;
+    font-weight: 700;
+}
+
+/* ── Out-of-month ── */
+td.fora > span {
+    color: rgba(255,255,255,0.18);
+    font-weight: 400;
+    cursor: default;
+}
+
+tr:last-child td {
+    padding-bottom: 16px;
+}
