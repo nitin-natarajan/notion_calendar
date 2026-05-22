@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #191919;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar {
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 0;
+    width: 272px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.cal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 14px 2px;
+}
+
+.cal-header-title {
+    text-align: center;
+}
+
+.cal-month-name {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.3px;
+}
+
+.cal-year-name {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.35);
+    margin-top: 1px;
+    letter-spacing: 0.1px;
+}
+
+.nav-btn {
+    background: #2a2a2a;
+    color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.08);
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    transition: background 0.15s, color 0.15s;
+    flex-shrink: 0;
+}
+
+.nav-btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.day-header {
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 0 6px;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    padding: 2px 0;
+}
+
+td > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.12s;
+}
+
+td:not(.fora):not(.avui) > span:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+td.avui > span {
+    background: #fff;
+    color: #111;
+    font-weight: 700;
+}
+
+td.fora > span {
+    color: rgba(255,255,255,0.18);
+    font-weight: 400;
+    cursor: default;
+}
+
+tr:last-child td {
+    padding-bottom: 10px;
+}
